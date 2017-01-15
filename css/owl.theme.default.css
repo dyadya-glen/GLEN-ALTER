@@ -1,0 +1,31 @@
+.owl-theme .owl-controls {
+    //margin-top: 10px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 16px;
+    height: 16px;
+    margin: 5px 15px;
+    background: #b0b0b0;
+    display: block;
+    -webkit-backface-visibility: visible;
+    border-radius: 50%;
+    -webkit-transition: background 0.5s;
+    transition: background 0.3s;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #b0b0b0;
+}
