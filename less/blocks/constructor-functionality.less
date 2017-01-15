@@ -1,0 +1,133 @@
+#device-black:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-black"],
+#device-blue:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-blue"],
+#device-green:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-green"],
+#device-red:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-red"],
+#device-pink:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-pink"],
+#device-orange:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-orange"],
+#device-yellow:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-yellow"] {
+  width: 18px;
+  height: 18px;
+  border: 4px solid #fff;
+  border-radius: 30%;
+}
+
+
+#device-black:checked ~ .constructor__container-img .constructor__device-img {
+  background-image: url(../img/constructor/device-black.jpg)
+}
+#device-blue:checked ~ .constructor__container-img .constructor__device-img {
+  background-image: url(../img/constructor/device-blue.jpg)
+}
+#device-green:checked ~ .constructor__container-img .constructor__device-img {
+  background-image: url(../img/constructor/device-green.jpg)
+}
+#device-red:checked ~ .constructor__container-img .constructor__device-img {
+  background-image: url(../img/constructor/device-red.jpg)
+}
+#device-pink:checked ~ .constructor__container-img .constructor__device-img {
+  background-image: url(../img/constructor/device-pink.jpg)
+}
+#device-orange:checked ~ .constructor__container-img .constructor__device-img {
+  background-image: url(../img/constructor/device-orange.jpg)
+}
+#device-yellow:checked ~ .constructor__container-img .constructor__device-img {
+  background-image: url(../img/constructor/device-yellow.jpg)
+}
+
+
+#no-fixing:checked ~ .constructor__container-controls .constructor__mounts label[for="no-fixing"],
+#on-hand:checked ~ .constructor__container-controls .constructor__mounts label[for="on-hand"],
+#on-wrist:checked ~ .constructor__container-controls .constructor__mounts label[for="on-wrist"],
+#on-foot:checked ~ .constructor__container-controls .constructor__mounts label[for="on-foot"],
+#on-wingsuit:checked ~ .constructor__container-controls .constructor__mounts label[for="on-wingsuit"] {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  transform: translateY(0);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+
+#no-fixing:checked ~ .constructor__container-controls .constructor__mounts label[for="no-fixing"]:hover,
+#on-hand:checked ~ .constructor__container-controls .constructor__mounts label[for="on-hand"]:hover,
+#on-wrist:checked ~ .constructor__container-controls .constructor__mounts label[for="on-wrist"]:hover,
+#on-foot:checked ~ .constructor__container-controls .constructor__mounts label[for="on-foot"]:hover,
+#on-wingsuit:checked ~ .constructor__container-controls .constructor__mounts label[for="on-wingsuit"]:hover {
+  background-color: #f6f6f6;
+}
+
+
+#no-fixing:checked ~ .constructor__container-img .constructor__mount-img {
+  display: none;
+}
+#on-hand:checked ~ .constructor__container-img .constructor__mount-img,
+#on-wrist:checked ~ .constructor__container-img .constructor__mount-img,
+#on-foot:checked ~ .constructor__container-img .constructor__mount-img,
+#on-wingsuit:checked ~ .constructor__container-img .constructor__mount-img {
+  display: block;
+}
+
+
+#on-hand:checked ~ .constructor__container-img .constructor__mounts-img {
+  background-image: url(../img/constructor/mount-on-hand.png);
+}
+#on-wrist:checked ~ .constructor__container-img .constructor__mounts-img {
+  background-image: url(../img/constructor/mount-on-wrist.png);
+}
+#on-foot:checked ~ .constructor__container-img .constructor__mounts-img {
+  background-image: url(../img/constructor/mount-on-foot.png);
+}
+#on-wingsuit:checked ~ .constructor__container-img .constructor__mounts-img {
+  background-image: url(../img/constructor/mount-on-foot.png);
+}
+
+
+#mount-black:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-black"],
+#mount-blue:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-blue"],
+#mount-green:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-green"],
+#mount-red:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-red"],
+#mount-yellow:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-yellow"] {
+  width: 29px;
+  height: 29px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+}
+
+@media (min-width: 1200px){
+  #mount-black:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-black"],
+  #mount-blue:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-blue"],
+  #mount-green:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-green"],
+  #mount-red:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-red"],
+  #mount-yellow:checked ~ .constructor__container-controls .constructor__mount-controls label[for="mount-yellow"],
+  #device-black:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-black"],
+  #device-blue:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-blue"],
+  #device-green:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-green"],
+  #device-red:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-red"],
+  #device-pink:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-pink"],
+  #device-orange:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-orange"],
+  #device-yellow:checked ~ .constructor__container-controls .constructor__device-controls label[for="device-yellow"] {
+    width: 13px;
+    height: 13px;
+    border: 0;
+    box-shadow: 0 0 0 5px #c6e4f9;
+    border-radius: 50%;
+  }
+}
+
+
+#mount-black:checked ~ .constructor__container-img .constructor__mount-img {
+  background-image: url(../img/constructor/mount-black.png);
+}
+#mount-blue:checked ~ .constructor__container-img .constructor__mount-img {
+  background-image: url(../img/constructor/mount-blue.png);
+}
+#mount-green:checked ~ .constructor__container-img .constructor__mount-img {
+  background-image: url(../img/constructor/mount-green.png);
+}
+#mount-red:checked ~ .constructor__container-img .constructor__mount-img {
+  background-image: url(../img/constructor/mount-red.png);
+}
+#mount-yellow:checked ~ .constructor__container-img .constructor__mount-img {
+  background-image: url(../img/constructor/mount-yellow.png);
+}

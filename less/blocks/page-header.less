@@ -1,0 +1,504 @@
+.page-header {
+  &__topheader{
+    position: relative;
+    z-index: 2;
+    min-height: 53px;
+    background-color: #434343;
+    background-image: linear-gradient(#515151, #323232);
+    border-bottom: 1px solid #939393;
+  }
+
+  &__wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 9%;
+    padding-right: 9%;
+
+    &--top {
+      position: relative;
+      text-align: center;
+    }
+
+    &--menu {
+      padding-top: 0;
+    }
+  }
+
+  &__toglle {
+    box-sizing: border-box;
+    position: absolute;
+    left: 9%;
+    top: 50%;
+    transform: translateY(50%);
+    width: 30px;
+    height: 20px;
+    border-top: 4px solid #fff;
+    cursor: pointer;
+    font-size: 0;
+    transition: border-width 0.5s;
+
+    &::before {
+       position: absolute;
+       content: '';
+       display: block;
+       background-color: #fff;
+       width: 30px;
+       height: 4px;
+       top: 4px;
+       transition: transform 0.5s, top 0.5s, background 0.5s;
+    }
+
+    &::after {
+       position: absolute;
+       content: '';
+       display: block;
+       background-color: #fff;
+       width: 30px;
+       height: 4px;
+       top: 12px;
+       transition: transform 0.5s, top 0.5s, background 0.5s;
+    }
+
+    &--show {
+    border-top-width: 0px;
+      transition: border-width 0.1s;
+
+      &::before {
+        transform: rotate(-45deg);
+        top: 8px;
+        background-color: red;
+        transition: transform 0.5s, top 0.5s, background 10s;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        top: 8px;
+        background-color: red;
+        transition: transform 0.5s, top 0.5s, background 10s;
+      }
+    }
+  }
+
+  &__logo {
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 123px;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+
+  &__product-list {
+    //display: none;
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    top: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 82%;
+    border: none;
+    transition: all .3s;
+
+    &--show {
+      display: block;
+      height: 127px;
+    }
+  }
+
+  &__product-item {
+    position: relative;
+    border-top: 1px solid #7c7c7c;
+    border-bottom: 1px solid #000;
+    z-index: 1000;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__product-link {
+    display: block;
+    color: #eee;
+    background-color: #515151;
+    font-family: 'SFUIText', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+    padding-left: 20px;
+
+    &:hover {
+      background-color: #474747;
+    }
+  }
+
+  &__review-block {
+    box-sizing: border-box;
+    display: block;
+    float: right;
+    margin-right: -3px;
+  }
+
+  &__cart {
+    display: inline-block;
+    vertical-align: top;
+    &-link {
+      display: block;
+      text-decoration: none;
+      height: 30px;
+      padding-left: 20px;
+      background-image: url(../img/icons/shop-cart.svg);
+      background-repeat: no-repeat;
+      background-position: 0px 7px;
+      background-size: 23px;
+    }
+
+    &-total {
+      display: block;
+      height: 16px;
+      padding: 0 5px 0 4px;
+      color: #fff;
+      font-family: 'SFUIText', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      background-color: red;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 16px;
+    }
+  }
+
+  &__length {
+    position: absolute;
+    display: block;
+    right: 18%;
+    bottom: -75px;
+    padding: 5px;
+    padding-top: 10px;
+    border-top: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 1px 2px 0px #323232;
+    z-index: 0;
+
+    &--show {
+      display: none;
+    }
+
+    &-ru, &-eng {
+      display: inline-block;
+      vertical-align: top;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: 'SFUIText', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    &-ru {
+      margin-right: 5px;
+    }
+  }
+
+
+  &__phone {
+    display: none;
+  }
+
+  &__menu {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.80);
+    font-family: 'SFUIText', sans-serif;
+    font-weight: 600;
+    font-size: 19.32px;
+    transition: transform 0.5s;
+    z-index: 1;
+
+    &--show {
+      transform:none;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &--products-closed {
+        display: none;
+      }
+    }
+
+    &-item {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+
+      &--products {
+        height: 57px;
+        transition: all .3s;
+
+        &-show{
+          height: 270px;
+          height: 185px;
+          //transition: all 1s;
+        }
+      }
+
+      &:last-child {
+        border-bottom-color: transparent;
+      }
+    }
+
+    &-link {
+      display: block;
+      text-decoration: none;
+      color: #eee;
+      padding: 15px 0;
+
+      span {
+        display: none;
+      }
+
+      &:hover {
+        color: red;
+      }
+
+      &--contacts {
+        color: #bababa;
+
+        &:hover {
+          color: #bababa;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.length-run {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+@media (min-width: 700px){
+
+  .page-header {
+
+    &__product-list {
+      left: 29px;
+      width: 262px;
+    }
+
+    &__length {
+      right: 24%;
+      bottom: -28px;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+
+      &-ru, &-eng {
+        color: red;
+        font-family: 'SFUIText', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      &-ru {
+        margin-right: 5px;
+      }
+    }
+
+    &__menu {
+      width: 320px;
+    }
+  }
+
+  .length-run {
+    color: rgba(255, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 1200px){
+
+  .page-header {
+
+    &__wrapper {
+      box-sizing: border-box;
+      width: 1200px;
+      padding-top: 10px;
+      padding-left: 120px;
+      padding-right: 120px;
+
+      &--menu {
+        padding-top: 0;
+        text-align: center;
+        //background-color: #0ff;
+      }
+    }
+
+    &__toglle {
+      display: none;
+    }
+
+    &__logo {
+      position: static;
+      transform: none;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &__product-list {
+      position: static;
+      //display: inline-block;
+      display: inline-flex;
+      justify-content: flex-start;
+      vertical-align: middle;
+      //padding-top: 8px;
+      padding-top: 12px;
+      margin: 0;
+      list-style: none;
+      padding-left: 0;
+      //width: auto;
+      width: 50%;
+      height: auto;
+    }
+
+    &__product-item {
+      //display: inline-block;
+      padding-bottom: 0;
+      margin-left: 43px;
+      border: none;
+      //vertical-align: middle;
+      font-size: 0;
+      text-align: left;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    &__product-link {
+      display: block;
+      height: auto;
+      color: #fff;
+      font-family: 'SFUIDisplay', sans-serif;
+      font-size: 19px;
+      font-weight: 100;
+      line-height: 14px;
+      text-align: left;
+      text-decoration: none;
+      text-shadow: none;
+      background-color: transparent;
+      padding-left: 0;
+
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+
+    &__length {
+      position: static;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      padding-top: 10px;
+      height: 33px;
+      margin-left: 12px;
+    }
+
+    &__phone {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 42px;
+      margin-left: 13px;
+      font-family: 'SFUIDisplay', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &__menu {
+      position: static;
+      display: block;
+      background-color: transparent;
+      width: auto;
+
+      &-list {
+        display: block;
+        list-style: none;
+        margin: auto;
+        margin-top: 25px;
+      }
+
+      &-item {
+        font-size: 0;
+        display: inline-block;
+        border-right: 1px solid #3a3a3a;
+        border-bottom: none;
+        padding: 0 33px;
+
+        &--products {
+          display: none;
+        }
+
+        &--first-desctop {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          border-right: none;
+          padding-right: 0;
+        }
+      }
+
+      &-link {
+        display: inline;
+        text-decoration: none;
+        font-family: 'SFUIDisplay', sans-serif;
+        font-weight: 300;
+        font-size: 13.25px;
+        color: #3a3a3a;
+        padding: 0;
+
+        &:hover {
+          color: #f00;
+          text-decoration: underline;
+        }
+
+        &--on-the-page {
+          color: #bababa;
+
+          &:hover {
+            color: #bababa;
+            text-decoration: none;
+          }
+        }
+
+        span {
+          display: inherit;
+        }
+      }
+    }
+  }
+
+  .length-run {
+    color: rgba(255, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,163 @@
+input.error, textarea.error {
+    border-color: red;
+}
+
+.question {
+  position: relative;
+  //height: 480px;
+  height: 100vh;
+  max-height: 934px;
+  min-height: 480px;
+  background-image: url(../img/skydiving.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  box-sizing: border-box;
+
+  &__wrapper {
+    box-sizing: border-box;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    //border: 1px solid #000;
+    height: 100%;
+  }
+
+  &__form {
+    position: relative;
+    max-width: 360px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    //background-color: rgba(43, 47, 224, 0.5);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 38px;
+    line-height: 25px;
+    font-size: 25px;
+    font-weight: 300;
+    color: #353535;
+  }
+
+  &__email, &__user-text {
+    width: 100%;
+    padding: 2%;
+    max-height: 42px;
+    margin-bottom: 3.5%;
+    font-size: 12.5px;
+    //font-weight: 200;
+    //color: #7f7f7f;
+    //color: #353535;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    outline: 0;
+  }
+
+  &__user-text {
+  //display: block;
+  resize: none;
+  max-height: none;
+  height: 120px;
+  overflow: auto;
+  margin-bottom: 40px;
+  line-height: 18px;
+  }
+
+  &__submit {
+    .button();
+    width: 60%;
+    border: none;
+    outline: 0;
+    padding: 0;
+    margin: auto;
+
+    &:hover {
+      .button-hover();
+    }
+
+    &:active {
+      .button-active();
+    }
+
+    &--order {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (min-width: 700px){
+
+  .question {
+    background-position: center -220px;
+    background-size: auto;
+
+    &__wrapper {
+      box-sizing: border-box;
+      padding-left: 22.2%;
+      padding-right: 22.2%;
+    }
+
+    &__form {
+      max-width: 425px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    &__email, &__user-text {
+      margin-bottom: 20px;
+      font-size: 17.09px;
+    }
+
+    &__user-text {
+    height: 140px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    }
+
+    &__submit {
+      font-size: 19.88px;
+      text-transform: uppercase;
+      width: 100%;
+      height:40px;
+      border-radius: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px){
+
+  .question {
+    height: 740px;
+    max-height: none;
+    background-position: center center;
+
+    &__wrapper {
+      width: 1200px;
+      padding-left: 120px;
+      padding-right: 120px;
+      margin: auto;
+    }
+
+    &__form {
+      max-width: 445px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      font-size: 41.96px;
+      font-weight: 200;
+    }
+  }
+}
+
+@media (min-width: 2260px){
+  .question {
+    background-position: center;
+    background-size: cover;
+  }
+}

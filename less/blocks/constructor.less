@@ -1,0 +1,457 @@
+.constructor {
+  padding: 20px 0;
+
+  &__title {
+    font-size: 27.08px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0px;
+    font-weight: 200;
+    font-size: 16.67px;
+    text-align: center;
+  }
+
+  &__form {
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__container-img{
+    position: relative;
+  }
+
+  &__device-img {
+    margin: auto;
+    width: 290px;
+    height: 190px;
+    //background-image: url(../img/constructor/mount-black.png);
+    background-repeat: no-repeat;
+    background-position: 89px 28px;
+    background-size: 122px;
+    transition: background 0.5s;
+  }
+
+  &__mounts-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    //background-image: url(../img/constructor/mount-on-hand.png);
+    width: 290px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 290px;
+    transition: background 0.8s;
+    z-index: 10;
+  }
+
+  &__mount-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 290px;
+    height: 190px;
+    //background-image: url(../img/constructor/mount-black.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 290px;
+    transition: background 0.5s;
+    z-index: 0;
+  }
+
+  &__mounts {
+    overflow: hidden;
+    position: relative;
+    width: 256px;
+    height: 31px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 0 0 1px #d0d0d0;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 200;
+    z-index: 10;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      top: 13px;
+      right: 10px;
+      position: absolute;
+      border-top: 6px solid #d0d0d0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      z-index: 10;
+    }
+
+    &--show {
+      overflow: visible;
+    }
+
+    &-item {
+      display: block;
+      width: 101.6%;
+      height: 35px;
+      line-height: 20px;
+      transform: translateY(94%) translateX(-0.8%);
+      border: 1px solid #d0d0d0;
+      background-color: #f6f6f6;
+      text-align: left;
+      box-sizing: border-box;
+      padding: 7px 15px;
+      //padding-left: 15px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #c6e4f9;
+      }
+    }
+  }
+
+
+  &__input {
+    display: none;
+  }
+
+
+
+  &__device-controls, &__mount-controls {
+    text-align: center;
+    font-size: 0;
+
+    &-title {
+      font-weight: 200;
+      font-size: 14.58px;
+      text-align: center;
+    }
+  }
+
+  &__device-control, &__mount-control {
+    display: inline-block;
+    vertical-align: top;
+    width: 26px;
+    height: 26px;
+    margin-right: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--black {
+      background-color: #000;
+
+      &::before, &::after {
+        content: '';
+        visibility: hidden;
+      }
+
+      &::before {
+        background-image: url(../img/constructor/device-blue.jpg);
+      }
+
+      &::after {
+        background-image: url(../img/constructor/device-green.jpg);
+      }
+    }
+    &--blue {
+      background-color: #1d53e7;
+
+      &::before, &::after {
+        content: '';
+        visibility: hidden;
+      }
+
+      &::before {
+        background-image: url(../img/constructor/device-red.jpg);
+      }
+
+      &::after {
+        background-image: url(../img/constructor/device-pink.jpg);
+      }
+    }
+    &--green {
+      background-color: #008a44;
+      background-color: #7FD400;
+
+      &::before, &::after {
+        content: '';
+        visibility: hidden;
+      }
+
+      &::before {
+        background-image: url(../img/constructor/device-orange.jpg);
+      }
+
+      &::after {
+        background-image: url(../img/constructor/device-yellow.jpg);
+      }
+    }
+    &--red {
+      background-color: #ca1c18;
+
+      &::before, &::after {
+        content: '';
+        visibility: hidden;
+      }
+
+      &::before {
+        background-image: url(../img/constructor/mount-black.png);
+      }
+
+      &::after {
+        background-image: url(../img/constructor/mount-blue.png);
+      }
+    }
+    &--pink {
+      background-color: #fa4290;
+
+      &::before, &::after {
+        content: '';
+        visibility: hidden;
+      }
+
+      &::before {
+        background-image: url(../img/constructor/mount-green.png);
+      }
+
+      &::after {
+        background-image: url(../img/constructor/mount-yellow.png);
+      }
+    }
+    &--orange {
+      background-color: #f45f24;
+
+      &::before, &::after {
+        content: '';
+        visibility: hidden;
+      }
+
+      &::before {
+        background-image: url(../img/constructor/mount-on-hand.png);
+      }
+
+      &::after {
+        background-image: url(../img/constructor/mount-on-wrist.png);
+      }
+    }
+    &--yellow {
+      background-color: #ffed00;
+
+      &::before, &::after {
+        content: '';
+        visibility: hidden;
+      }
+
+      &::before {
+        background-image: url(../img/constructor/mount-on-foot.png);
+      }
+
+      &::after {
+        background-image: url(../img/constructor/mount-on-foot.png);
+      }
+    }
+  }
+
+  &__mount-control {
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+    border-radius: 50%;
+
+    &--green {
+      //background-color: #10ff63;
+      background-color: #98D73E;
+    }
+  }
+
+  &__buttons {
+    display: none;
+  }
+}
+
+@media (min-width: 700px){
+
+  .constructor {
+    padding: 55px 0;
+
+    &__title {
+      font-size: 39.61px;
+    }
+
+    &__text {
+      margin-top: 10px;
+      font-size: 26.6px;
+      margin-bottom: 70px;
+    }
+
+    &__device-img {
+      width: 390px;
+      height: 260px;
+      //background-image: url(../img/constructor/mount-black.png);
+      background-position: 121px 38px;
+      background-size: 164px;
+    }
+
+    &__mounts-img {
+      //background-image: url(../img/constructor/mount-on-hand.png);
+      width: 390px;
+      height: 260px;
+      background-size: 390px;
+    }
+
+    &__mount-img {
+      width: 390px;
+      height: 260px;
+      //background-image: url(../img/constructor/mount-black.png);
+      background-size: 390px;
+    }
+
+    &__device-controls-title, &__mount-controls-title {
+      font-size: 22.79px;
+      font-weight: 200;
+    }
+
+    &__buttons {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      padding-bottom: 50px;
+
+      &-link {
+        .button();
+        width: 205px;
+        border: none;
+        outline: 0;
+
+        &:hover {
+          .button-hover();
+        }
+
+        &:active {
+          .button-active();
+        }
+
+        &--order {
+          margin-right: 10px;
+        }
+
+        &--detail {
+          margin-left: 10px;
+          background-color: #2c2c2c;
+
+          &:hover {
+            .button-hover();
+            background-color: #3e3e3e;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .constructor {
+    padding: 55px 0;
+
+    &__title {
+      font-size: 46.07px;
+      line-height: 55px;
+    }
+
+    &__text {
+      margin: 0px;
+      margin-top: 30px;
+      margin-bottom: 35px;
+      font-size: 30.92px;
+      line-height: 40px;
+    }
+
+    &__container-img{
+      margin-top: 25px;
+      margin-right: 85px;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    &__container-controls {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 45px;
+    }
+
+    &__device-img {
+      width: 453px;
+      height: 298px;
+      //background-image: url(../img/constructor/mount-black.png);
+      background-position: 141px 46px;
+      background-size: 191px;
+    }
+
+    &__mounts-img {
+      //background-image: url(../img/constructor/mount-on-hand.png);
+      width: 453px;
+      height: 298px;
+      background-size: 453px;
+    }
+
+    &__mount-img {
+      width: 453px;
+      height: 298px;
+      //background-image: url(../img/constructor/mount-black.png);
+      background-size: 453px;
+    }
+
+    &__device-controls,
+    &__mount-controls {
+      text-align: left;
+
+      &-title {
+        text-align: left;
+      }
+    }
+
+    &__device-controls {
+
+      &-title {
+        margin-top: 0;
+      }
+    }
+
+    &__device-control, &__mount-control {
+      display: inline-block;
+      vertical-align: top;
+      width: 13px;
+      height: 13px;
+      margin: 10px 0;
+      margin-right: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:first-child {
+        margin-left: 5px;
+      }
+    }
+
+    &__mount-control {
+      margin-bottom: 0;
+    }
+
+    &__mounts {
+      margin: 35px 0;
+    }
+
+    &__buttons {
+      margin-top: 80px;
+    }
+  }
+}

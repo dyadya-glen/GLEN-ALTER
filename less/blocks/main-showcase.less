@@ -1,0 +1,371 @@
+.main-showcase {
+  font-family: 'SFUIDisplay', sans-serif;
+  font-weight: 200;
+}
+
+.product {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 35px 9%;
+  background-image: linear-gradient(#fff, #f7f7f7);
+  text-align: center;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+
+  &__images {
+    width: 176px;
+    width: 67.073170731707317%;
+    max-width: 206px;
+    margin: 25px auto;
+
+    &--hand {
+      width: 80%;
+      max-width: 250px;
+    }
+
+    &--wing {
+      width: 51%;
+      max-width: 170px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__colors {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 20px;
+  }
+
+  &__color {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-right: 6px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--black {
+      background-color: #000;
+    }
+
+    &--blue {
+      background-color: #2e4da1;
+    }
+
+    &--green {
+      background-color: #30b976;
+    }
+
+    &--red {
+      background-color: #ca1c18;
+    }
+
+    &--pink {
+      background-color: #e85191;
+    }
+
+    &--orange {
+      background-color: #f5814c;
+    }
+
+    &--yellow {
+      background-color: #f3f54c;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    order: -1;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 20.83px;
+    font-weight: 300;
+  }
+
+  &__type {
+    font-size: 14.58px;
+    font-weight: 200;
+  }
+
+  &__text, &__properties {
+    padding: 0;
+    font-size: 12.5px;
+    font-weight: 200;
+    margin: 0;
+    text-align: left;
+  }
+
+  &__property {
+    list-style: none;
+    text-indent: 10px;
+    position: relative;
+
+    &::before {
+      color: #343434;
+      content:"\2022";
+      font-size: 12.5px;
+      font-weight: 700;
+      text-indent: -10px;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  &__price {
+    vertical-align: top;
+    line-height: 48px;
+    font-size: 25px;
+    font-weight: 200;
+  }
+
+  &__buttons-link {
+    .button();
+    padding: 14px 30px;
+  }
+}
+
+@media (min-width: 700px){
+
+  .main-showcase {
+    font-weight: 300;
+  }
+
+  .product {
+    display: block;
+    .clearfix();
+
+    &__container {
+      display: inline-block;
+      width: 50%;
+      height:247px;
+      float: left;
+    }
+
+    &__images {
+
+      &--wing {
+        position: relative;
+        top: 40px;
+         margin-top: -90px;
+      }
+    }
+
+    &__img {
+
+      &--wing {
+        transform: rotate(-75deg) ;
+        margin-top: 0;
+      }
+    }
+
+    &__title {
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    &__name {
+      font-size: 18.99px;
+      //font-weight: 300;
+      line-height: 10px;
+    }
+
+    &__type {
+      font-size: 13.29px;
+      font-weight: 300;
+      line-height: 13px;
+    }
+
+    &__content {
+      max-width: 700px;
+      margin: 0 auto;
+
+      &--forearm {
+        padding-top: 130px;
+      }
+
+      &--wrist {
+        padding-top: 130px;
+      }
+
+      &--leg {
+        padding-top: 130px;
+      }
+
+      &--wing {
+        padding-top: 80px;
+      }
+
+      &--fly-sight {
+        padding-top: 120px;
+      }
+    }
+
+    &__text, &__properties {
+      font-size: 11.39px;
+      font-weight: 300;
+    }
+
+    &__footer {
+      margin-top: 10px;
+      justify-content: space-between;
+    }
+
+    &__price {
+      vertical-align: top;
+      line-height: 48px;
+      font-size: 22.79px;
+      font-weight: 200;
+    }
+
+    &__buttons-link {
+      .button();
+      height: 40px;
+      padding: 12px 25px;
+      font-size: 18.99px;
+    }
+  }
+}
+
+@media (min-width: 1200px){
+
+  .main-showcase {
+    background: #f7f7f7;
+    padding: 60px 0;
+
+    &__wrapper {
+      width: 1200px;
+      margin: auto;
+      font-size: 0;
+    }
+  }
+
+  .product {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 50%;
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    &:nth-child(2n) {
+      padding-left: 0px;
+      padding-right: 100px;
+    }
+
+    &__container {
+
+      &--no-kit {
+        padding-top: 35px;
+      }
+
+      &--fly-sight {
+        padding-top: 68px;
+      }
+    }
+
+    &__images {
+
+      &--wing {
+        position: relative;
+        top: 0px;
+        margin-top: 0px;
+      }
+    }
+
+    &__img {
+
+      &--wing {
+        transform: rotate(0deg) ;
+        margin-top: 0;
+      }
+    }
+
+    &__name {
+      font-size: 22.09px;
+      font-weight: 300;
+      line-height: 35px;
+    }
+
+    &__type {
+      font-size: 15.46px;
+      font-weight: 200;
+      line-height: 13px;
+    }
+
+    &__content {
+      max-width: 700px;
+      margin: 0 auto;
+
+      &--forearm {
+        padding-top: 106px;
+
+        &-en {
+          padding-top: 119px;
+        }
+      }
+
+      &--wrist {
+        padding-top: 80px;
+      }
+
+      &--leg {
+        padding-top: 80px;
+      }
+
+      &--fly-sight {
+        padding-top: 143px;
+
+        &-en {
+          padding-top: 127px;
+        }
+      }
+    }
+
+    &__text, &__properties {
+      font-size: 12px;
+      font-weight: 100;
+    }
+
+    &__buttons-link {
+      .button();
+      margin-top: 8px;
+      margin-right: 40px;
+      height: 28px;
+      padding: 6px 14px;
+      font-size: 14.29px;
+
+      &--en {
+        padding-left:25px;
+        padding-right:25px;
+      }
+    }
+  }
+}

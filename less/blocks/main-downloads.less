@@ -1,0 +1,123 @@
+.main-downloads {
+  display: table-row;
+  height: 100%;
+  font-family: 'SFUIDisplay', sans-serif;
+  font-size: 13.25px;
+  font-weight: 300;
+
+  &__wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+
+  &__container {
+    margin-bottom: 50px;
+
+    &:first-child {
+      margin-top: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 5px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  &__link-manual {
+    display: block;
+    height: 30px;
+    text-decoration: none;
+    color: #000;
+    margin: 10px auto;
+    padding: 6px 0;
+    padding-left: 35px;
+    background-image: url(../img/icons/icon-pdf.svg);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--win {
+      background-image: url(../img/icons/icon-windows.svg);
+    }
+
+    &--apple {
+      background-image: url(../img/icons/icon-apple.svg);
+    }
+  }
+}
+
+
+@media (min-width: 700px) {
+
+  .main-downloads {
+    background-image: repeating-linear-gradient(150deg,rgba(140,140,140,.06),rgba(140,140,140,.06) 1px,transparent 0,transparent 41px),repeating-linear-gradient(-150deg,rgba(140,140,140,.06),rgba(140,140,140,.06) 1px,transparent 0,transparent 41px);
+    background-size: 82px 47px;
+
+    &__container {
+      margin-bottom: 60px;
+    }
+
+
+    &__title {
+      font-size: 20px;
+      max-width: 50%;
+      padding-left: 0;
+      text-align: center;
+    }
+
+      &__link-manual {
+        height: 40px;
+        max-width: 42%;
+        padding: 12px 0;
+        padding-left: 50px;
+        font-size: 14px;
+      }
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  .main-downloads {
+
+    &__wrapper {
+      width: 1200px;
+      padding-top: 10px;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    &__container {
+      margin: 60px 0;
+    }
+
+
+    &__title {
+      font-size: 26.5px;
+      margin-top: -10px;
+      margin-bottom: 18px;
+      max-width: 35%;
+    }
+
+    &__link-manual {
+      height: 50px;
+      font-size: 17px;
+      max-width: 30%;
+      padding: 15px 0;
+      padding-left: 60px;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+.popup {
+   display: none;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.90);
+      z-index: 1000;
+      transition: all 1s;
+
+    &:before {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      content: '';
+    }
+
+  &__content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 80%;
+    padding: 3%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-family: 'SFUIDisplay', sans-serif;
+    font-weight: 100;
+    font-size: 12.5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    transition: all 1s;
+  }
+
+  &__title {
+    font-family: 'SFUIDisplay', sans-serif;
+    font-size: 20.83px;
+    font-weight: 200;
+    color: #fff;
+  }
+
+  &__text {
+    color: #fff;
+    text-align: center;
+  }
+
+  &__form{
+    text-align: center;
+
+    &-labelphone {
+      display: block;
+      width: 82%;
+      margin: auto;
+      color: #fff;
+      font-weight: 100;
+      font-size: 12.5px;
+      text-align: left;
+      padding: 1% 2%;
+      box-sizing: border-box;
+    }
+
+    &-email, &-submit, &-telephone{
+      width: 82%;
+      padding: 1% 2%;
+      max-height: 42px;
+      margin-bottom: 3.5%;
+      font-size: 12.5px;
+      box-sizing: border-box;
+      border: 1px solid #fff;
+      border-radius: 6px;
+      outline: 0;
+    }
+
+    &-submit{
+      font-family: 'SFUIText', sans-serif;
+      font-size: 13.48px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #ca0813;
+      border-color: #ca0813;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 700px){
+  .popup {
+
+    &__content {
+      width: 60%;
+      max-width: 560px;
+      font-size: 19px;
+      border-radius: 20px;
+    }
+
+
+    &__title {
+      font-size: 30.38px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__form{
+
+      &-labelphone {
+        font-size: 14.89px;
+        width: 80%;
+      }
+
+      &-email, &-submit, &-telephone {
+        width: 80%;
+        font-size: 20.89px;
+        height: 50px;
+      }
+
+      &-submit{
+        display: inline-block;
+        font-size: 19.88px;
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .popup {
+    font-size: 22.09px;
+
+    &__content {
+      max-width: 655px;
+      font-size: 22.09px;
+    }
+
+    &__title {
+      font-size: 35.42px;
+    }
+
+    &__form{
+
+      &-email, &-submit, &-telephone, &-labelphone {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.lock-page {
+  overflow: hidden;
+  position:fixed;
+  width: 100%;
+}

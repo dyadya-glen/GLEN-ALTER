@@ -1,0 +1,201 @@
+.page-footer {
+  border-top: 5px solid #333;
+  font-family: 'SFUIDisplay', sans-serif;
+  padding-top: 26px;
+  padding-bottom: 16px;
+  background-image: linear-gradient(#474747, #353535);
+  border-bottom: 2px solid #504f4f;
+
+  &__wrapper {
+    margin: 0 auto;
+    padding-left: 9%;
+    padding-right: 9%;
+    font-size: 0;
+    .clearfix();
+  }
+
+  &__products, &__business, &__about-company {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__business, &__about-company {
+    width: 50%;
+    float: left;
+  }
+
+  &__title {
+    display: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  &__item {
+    display: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 25px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--mobile {
+      display: block;
+    }
+  }
+
+  &__social-network {
+    // display: inline-block;
+    // vertical-align: top;
+    width: 50%;
+    text-align: right;
+    margin-top: 45px;
+    float: right;
+    // border: 1px solid #fff;
+    // box-sizing: border-box;
+  }
+
+  &__social-link {
+    margin-right: 15px;
+
+    &--inst {
+      margin-right: 0;
+    }
+
+    :hover {
+      opacity: .5;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__contakts {
+    font-size: 10px;
+    font-weight: 100;
+    color: #fff;
+    float: left;
+  }
+
+  &__tel, &__reseller {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__tel {
+    &:hover {
+      color: #ff7070;
+    }
+  }
+
+  &__reseller {
+    color: #1589c9;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__copyring {
+    font-size: 11px;
+    font-weight: 300;
+    float: left;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.vk, .fb, .inst {
+  width: 33px;
+  height: 33px;
+
+  :hover {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 550px) {
+  .page-footer {
+    text-align: center;
+
+    &__container-left {
+      float: left;
+      text-align: left;
+      min-width: 130px;
+    }
+
+    &__container-right {
+      float: right;
+      min-width: 130px;
+    }
+
+    &__about-company {
+      float: right;
+      width: auto;
+      text-align: left;
+    }
+
+    &__business {
+      margin-top: 16px;
+      width: auto;
+      float: none;
+    }
+
+    &__title {
+      display: block;
+      font-size: 16px;
+      font-weight: 200;
+      line-height: 16px;
+    }
+
+    &__item {
+      display: block;
+      font-size: 12px;
+      font-weight: 100;
+      line-height: 15px;
+    }
+
+    &__social-network {
+      display: inline-block;
+      vertical-align: top;
+      width: auto;
+      text-align: center;
+      margin-top: 0px;
+      float: none;
+    }
+
+    &__contakts {
+      width: 100%;
+      font-size: 13px;
+      font-weight: 200;
+      text-align: center;
+    }
+
+    &__copyring {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-footer {
+
+    &__wrapper {
+      box-sizing: border-box;
+      width: 1200px;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+  }
+}

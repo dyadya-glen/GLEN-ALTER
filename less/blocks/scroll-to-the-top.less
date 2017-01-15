@@ -1,0 +1,60 @@
+.scroll-to-the-top {
+    position: fixed;
+    z-index: 9999;
+    left: 10px;
+    top: 50px;
+    // width: 50px;
+    // height: 50px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    -webkit-transition: background-color .5s ease;
+            transition: background-color .5s ease;
+    border: 1px solid rgba(204,204,204,.1);
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.3);
+    box-sizing: content-box;
+
+    &:hover {
+    //background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.3);
+    }
+
+    &:active {
+    background-color: rgba(0,0,0,.3);
+    border-color: rgba(204,204,204,.5);
+    }
+
+    &::before {
+    position: absolute;
+    // width: 50px;
+    // height: 50px;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background-image: url("../img/icons/chevron-thin-up.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    opacity: .5;
+    box-sizing: content-box;
+    }
+}
+
+@media (min-width: 700px) {
+
+  .scroll-to-the-top {
+    bottom: 75px;
+    width: 50px;
+    height: 50px;
+
+    &:hover {
+    background-color: rgba(0,0,0,.8);
+    }
+
+    &::before {
+    width: 50px;
+    height: 50px;
+    }
+  }
+}
